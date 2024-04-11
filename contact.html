@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Contact Form</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function() {
+        (function () {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
-              publicKey: "GBeZJEpQ27UGX_NNr",
+                publicKey: "GBeZJEpQ27UGX_NNr",
             });
         })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
                 // these IDs from the previous steps
                 emailjs.sendForm('service_93od6ey', 'template_wj4kzjm', this)
@@ -24,22 +25,22 @@
                         console.log('FAILED...', error);
                     });
                 document.getElementById('contact-form').reset()
-                });
+            });
         }
     </script>
     <style>
-        body{
-            display:flex;
+        body {
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100%;
-            padding: 45px 0 45px 0;
             background-color: olive;
             color: white;
         }
-        .form-batta{
-            display:flex;
+
+        .form-batta {
+            display: flex;
             width: 50%;
             flex-direction: column;
             padding: 55px;
@@ -49,37 +50,63 @@
             gap: 6px;
             border-radius: 12px;
         }
-        label{
+
+        label {
             font-size: larger;
             font-weight: 400;
         }
-        input{
+
+        input {
             padding: 5px;
             border-radius: 4px;
             border: 0px;
             font-size: medium;
         }
-        textarea{
+
+        textarea {
             padding: 5px;
             border-radius: 4px;
         }
-        .sub{
+
+        .sub {
             background-color: rgb(213, 244, 242);
-            
+
         }
-        .sub:hover{
-            scale:102%;
+
+        .sub:hover {
+            scale: 102%;
             background-color: grey;
         }
-        .back{
+
+        .back {
             width: 100%;
         }
-        a{
+
+        a {
             text-decoration: none;
             color: white;
         }
+
+        @media only screen and (max-width: 600px) {
+            .body{
+                color: black;
+            }
+    .form-batta {
+        width: auto; /* Adjust width for smaller screens */
+    }
+
+    label {
+        font-size: small; /* Reduce font size */
+    }
+
+    input,
+    textarea {
+        font-size: smaller; /* Reduce font size */
+    }
+}
     </style>
 </head>
+
 <body>
     <span class="back"><a href="/index.html">← Back to home</a></span>
     <h1>Contact Me</h1>
@@ -97,4 +124,5 @@
     </form>
 
 </body>
+
 </html>
