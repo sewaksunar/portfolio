@@ -54,7 +54,24 @@ main {
     justify-content: center;
     border-radius: 100%; 
 }
+.profile-photo1 {
+    width: 256px; /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%; 
+}
+
 
 .khutta{
     padding: 20px;
+}
+*{
+    text-decoration: none;
+}
+.navbar{
+background: rgb(33, 152, 185); font-family: calibri; padding-right: 15px; padding-left: 15px;
+}
+.navdiv{
+    display: flex; align-items: center; justify-content: space-between;
 }
