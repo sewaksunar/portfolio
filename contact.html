@@ -3,6 +3,8 @@
 
 <head>
     <title>Contact Form</title>
+    <link rel="stylesheet" href="/styles/contact.css">
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -28,83 +30,6 @@
             });
         }
     </script>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            background-color: olive;
-            color: white;
-        }
-
-        .form-batta {
-            display: flex;
-            width: 50%;
-            flex-direction: column;
-            padding: 55px;
-            margin: 5px;
-            color: white;
-            background-color: #3d3030cf;
-            gap: 6px;
-            border-radius: 12px;
-        }
-
-        label {
-            font-size: larger;
-            font-weight: 400;
-        }
-
-        input {
-            padding: 5px;
-            border-radius: 4px;
-            border: 0px;
-            font-size: medium;
-        }
-
-        textarea {
-            padding: 5px;
-            border-radius: 4px;
-        }
-
-        .sub {
-            background-color: rgb(213, 244, 242);
-
-        }
-
-        .sub:hover {
-            scale: 102%;
-            background-color: grey;
-        }
-
-        .back {
-            width: 100%;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .body{
-                color: black;
-            }
-    .form-batta {
-        width: auto; /* Adjust width for smaller screens */
-    }
-
-    label {
-        font-size: small; /* Reduce font size */
-    }
-
-    input,
-    textarea {
-        font-size: smaller; /* Reduce font size */
-    }
-}
-    </style>
 </head>
 
 <body>
