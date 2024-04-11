@@ -18,25 +18,83 @@
                 // these IDs from the previous steps
                 emailjs.sendForm('service_93od6ey', 'template_wj4kzjm', this)
                     .then(() => {
-                        console.log('SUCCESS!');
+                        message = document.getElementById("success")
+                        message.innerHTML = "Message Sent Successfully"
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
-            });
+                document.getElementById('contact-form').reset()
+                });
         }
     </script>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 45px 0 45px 0;
+            background-color: olive;
+            color: white;
+        }
+        .form-batta{
+            display:flex;
+            width: 50%;
+            flex-direction: column;
+            padding: 55px;
+            margin: 5px;
+            color: white;
+            background-color: #3d3030cf;
+            gap: 6px;
+            border-radius: 12px;
+        }
+        label{
+            font-size: larger;
+            font-weight: 400;
+        }
+        input{
+            padding: 5px;
+            border-radius: 4px;
+            border: 0px;
+            font-size: medium;
+        }
+        textarea{
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .sub{
+            background-color: rgb(213, 244, 242);
+            
+        }
+        .sub:hover{
+            scale:102%;
+            background-color: grey;
+        }
+        .back{
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <form id="contact-form">
+    <span class="back"><a href="/index.html">← Back to home</a></span>
+    <h1>Contact Me</h1>
+    <form id="contact-form" class="form-batta">
         <!-- To simplify the tutorial, the value is static. -->
         <input type="hidden" name="contact_number" value="697483">
         <label>Name</label>
-        <input type="text" name="user_name">
+        <input type="text" name="user_name" required>
         <label>Email</label>
-        <input type="email" name="user_email">
+        <input type="email" name="user_email" required>
         <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
+        <textarea name="message" rows="15" required></textarea>
+        <input type="submit" value="Send" class="sub">
+        <div id="success"></div>
     </form>
+
 </body>
 </html>
