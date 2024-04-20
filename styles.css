@@ -150,7 +150,6 @@ button a {
 .servicesText:hover {
     border: 1px solid #008000;
 }
-/*
 /* Preloader styles */
 .preloader-container {
     position: fixed;
@@ -204,4 +203,62 @@ button a {
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+/* for trial */
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.openbtn {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.content {
+    padding: 20px;
+    transition: margin-left 0.5s;
 }

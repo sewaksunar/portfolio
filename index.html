@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sewak Sunar</title>
     <!-- <link rel="icon" href="favicon.ico" sizes="any" /> -->
-    <link rel="shortcut icon" type="image/jpg" href="profile.jpg" />
+    <link rel="shortcut icon" type="image/jpg" href="restorefacebookprofile.jpg" />
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -16,6 +16,11 @@
   </head>
 
   <body>
+    <!-- Preloader -->
+    <div class="preloader-container">
+        <div class="preloader"></div>
+        <div class="loading-text">Loading...</div> <!-- Loading text -->
+    </div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -80,7 +85,7 @@
           class="col-10 col-sm-8 col-lg-6 justify-content-sm-center align-items-sm-center"
         >
           <img
-            src="image.png"
+            src="restorefacebookprofile.jpg"
             class="d-block mx-lg-auto img-fluid w-75"
             style="border-radius: 100%"
             alt="Bootstrap Themes"
@@ -203,5 +208,12 @@
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+    <script>
+        // Hide preloader when the page is fully loaded
+        window.addEventListener("load", function () {
+            var preloader = document.querySelector(".preloader-container");
+            preloader.style.display = "none";
+        });
+    </script>
   </body>
 </html>
