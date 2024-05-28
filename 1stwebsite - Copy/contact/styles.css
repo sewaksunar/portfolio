@@ -1,0 +1,264 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+.about,
+.skills,
+.contact {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2,
+.skills h2,
+.contact h2 {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    /* Centering the heading */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.lekh {
+    font-size: larger;
+}
+
+.profile-photo {
+    width: 256px;
+    /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    margin: 0 14px 0 0;
+}
+
+.profile-photo1 {
+    width: 256px;
+    /* Adjust the size as needed */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+
+.khutta {
+    padding: 20px;
+}
+
+* {
+    text-decoration: none;
+}
+
+.navbar {
+    background: rgb(33, 152, 185);
+    font-family: calibri;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+button {
+    background-color: black;
+    margin-left: 10pxl;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+}
+
+button a {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+/* services section css */
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+    border: 1px solid #008000;
+}
+/* Preloader styles */
+.preloader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Initial background color with transparency */
+    backdrop-filter: blur(8px); /* Initial blur effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 3s forwards; /* Animation to fade out the preloader */
+}
+
+.preloader {
+    border: 4px solid #3498db; /* Blue border */
+    border-top: 4px solid transparent; /* Transparent border */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Rotate animation */
+    margin-bottom: 20px; /* Add spacing between loader and text */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Text styles */
+.loading-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #555; /* Dark grey text color */
+    margin: 0;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s 0.5s forwards; /* Fade-in animation */
+    text-align: center; /* Center align the text */
+}
+
+/* Animation to fade out the preloader */
+@keyframes fadeOut {
+    0% { opacity: 1; backdrop-filter: blur(8px); }
+    100% { opacity: 0; backdrop-filter: blur(0); background-color: transparent; }
+}
+
+/* Fade-in animation for the loading text */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* for trial */
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.openbtn {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.content {
+    padding: 20px;
+    transition: margin-left 0.5s;
+}

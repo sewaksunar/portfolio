@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "GBeZJEpQ27UGX_NNr",
+            });
+        })();
+    </script>/
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('open-nav').addEventListener('click', function () {
+                document.getElementById('nav').classList.add('open');
+                document.getElementById('main-content').classList.add('shift');
+            });
+
+            document.getElementById('close-nav').addEventListener('click', function () {
+                document.getElementById('nav').classList.remove('open');
+                document.getElementById('main-content').classList.remove('shift');
+            });
+
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_93od6ey', 'template_wj4kzjm', this)
+                    .then(() => {
+                        message = document.getElementById("success")
+                        message.innerHTML = "Message Sent Successfully"
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+                document.getElementById('contact-form').reset()
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="nav">
+            <button id="close-nav">&times;</button>
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="#" id="about">About</a></li>
+                <li><a href="#" id="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="main-content" class="main-content">
+            <button id="open-nav">&#9776;</button>
+            <h1>Contact Me</h1>
+            <form id="contact-form" class="form-batta">
+                <!-- To simplify the tutorial, the value is static. -->
+                <input type="hidden" name="contact_number" value="697483">
+                <div class="form-group">
+                    <label for="user_name">Your Name</label>
+                    <input type="text" id="user_name" name="user_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="user_email">Your Email</label>
+                    <input type="email" id="user_email" name="user_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <div class="button-container">
+                    <input type="submit" value="Send" class="button">
+                </div>
+                <div id="success" class="success-message"></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
